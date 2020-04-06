@@ -1,0 +1,43 @@
+{
+    "name": "leadthread/laravel-shortener",
+    "description": "",
+    "keywords": [
+        "laravel",
+        "shortener",
+        "tylercd100",
+        "url shortener",
+        "url",
+        "leadthread"
+    ],
+    "homepage": "https://github.com/leadthread/laravel-shortener",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tyler Arbon",
+            "email": "tylercd100@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "LeadThread\\Shortener\\":"src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeadThread\\Shortener\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^5.0",
+        "php": "^5.4|^7.0",
+        "leadthread/php-bitly": "^4.0",
+        "leadthread/php-google-shortener": "^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.1",
+        "phpunit/phpunit": "^4.8 || ^5.0"
+    },
+    "suggest": {
+    }
+}

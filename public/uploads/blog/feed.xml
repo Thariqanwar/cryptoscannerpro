@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<channel>
+  <title>blogs</title>
+  <link>http://www.cryptoscannerpro.com</link>
+  <item>
+    <title>Cryptoscanner Blog</title>
+    <link>http://www.cryptoscannerpro.com/22</link>
+    <category>a:2:{i:0;s:6:"cripto";i:1;s:4:"blog";}</category>
+    <description>our blog</description>
+    <pubDate>2020-01-07 12:38:09</pubDate>
+  </item>
+</channel>

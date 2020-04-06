@@ -1,0 +1,66 @@
+@import url("https://p.typekit.net/p.css?s=1&k=fxn5idj&ht=tk&f=26062&a=22103383&app=typekit&e=css");
+
+@font-face {
+    font-family:"acumin-pro";
+    src:url("https://use.typekit.net/af/46da36/00000000000000003b9acaf6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/46da36/00000000000000003b9acaf6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/46da36/00000000000000003b9acaf6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;
+    font-style:normal;
+    font-weight:400;
+}
+
+.tk-acumin-pro { font-family: "acumin-pro",sans-serif; }
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-Light.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-Roman.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-Medium.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-Medium.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-MediumOblique.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-MediumOblique.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-Black.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-Black.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../webfonts/AvenirLTStd-Heavy.woff2') format('woff2'),
+        url('../webfonts/AvenirLTStd-Heavy.woff') format('woff'),
+        url('../webfonts/AvenirLTStd-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

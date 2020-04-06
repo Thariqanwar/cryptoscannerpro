@@ -1,0 +1,274 @@
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	
+	&:hover .dropdown-content {
+		display: block;
+	}
+	
+	&:hover .dropbtn {
+		color: $primarycolor;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -25px;
+		left: 0;
+		width: 100%;
+		height: 30px;
+	}
+		
+	.dropbtn {
+		font-weight: 600;
+		color: $gray;
+		border: none;
+		background-color: transparent;
+		
+		img {
+			display: inline-block;
+			margin-right: 6px;
+		}
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 45px;
+		background-color: $primarycolor;
+		min-width: 160px;
+		padding: 15px;
+		z-index: 99;
+	    @include box-shadow(0px, 0px, 15px, rgba(0,0,0,0.15));
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: -12px;
+			right: 10px;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			border-bottom: 12px solid $primarycolor;
+		}
+
+		a {
+			color: $white;
+			padding:7px 5px;
+			text-decoration: none;
+			display: block;
+			
+			&:hover {
+				color: $secondarycolor;
+			}
+		}
+	}
+}
+
+.header {
+
+    &__dropdown {
+        @include flexbox();
+        @include justify-content(space-around);
+		
+        .small-icon {
+            position: relative;
+			cursor: pointer;
+			
+            &:hover {
+                color: #eee;
+			}
+			
+            .notification-number {
+				border-radius: 50%;
+				@include primary-gradient-cross;
+				color: $white;
+				width: 9px;
+				height: 9px;
+			}
+			
+            .bell-number {
+                position: absolute;
+                top: 0;
+                right: 3px;
+            }
+
+			.dropbtn {
+				background: transparent;
+				border: none;
+				margin-left:10px;
+				@include flexbox();
+				@include align-items(center);
+
+                @media (max-width: $breakpoint-xs) {
+                    margin-left: 0;
+                }
+
+				span {
+
+					&.name {
+						font-size: 16px;
+						font-weight: 500;
+
+						@media (max-width: $breakpoint-xs) {
+							display: none;
+						}
+					}
+
+					&.img-wrap {
+						width: 50px;
+						height: 50px;
+						@include border-radius(25px);
+						overflow: hidden;
+						margin-left: 20px;
+						border: 1px solid $offwhite;
+					}
+				}
+			}
+
+            .notification__list {
+				position: absolute;
+				background: $white;
+                width: 300px;
+                list-style-type: none;
+                text-align: center;
+                right: -20px;
+                top: 55px;
+                border-radius: 5px;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+                @include box-shadow(0px, 4px, 14px, rgba(0,0,0,0.3));
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-bottom-color: #fff;
+                    right: 11px;
+                    top: -20px;
+                    transform: translate(-50%);
+                }
+
+                &__name {
+                    font-size: 18px;
+                    font-weight: 600;
+                    background: #fff;
+                    color: $black;
+                    padding: 10px 0;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom: 1px solid #e4f8ff;
+                    transition: all 1s ease-in-out;
+					text-transform: capitalize;
+                    @include flexbox();
+                    @include justify-content(center);
+                    @include align-items(center);
+
+                    .notification-number {
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 10px;
+                        line-height: 10px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+				}      
+				
+				&__expire {
+					font-size: 14px;
+                    color: $black;
+					padding: 10px 0;
+					text-transform: capitalize;
+                    border-bottom: 1px solid #e4f8ff;
+				}
+
+				&.profile {
+					top: 70px;
+                    right: 0;
+                    
+                    @media (max-width: $breakpoint-xs) {
+                        right: -5px;
+
+                        &::before {
+                            right: 15px;
+                        }
+                    }
+                }
+                
+                &.notification {
+
+                    @media (max-width: $breakpoint-xs) {
+                        right: -86px;
+
+                        &::before {
+                            right: 80px;
+                        }
+                    }
+                }
+            }
+
+            .list__item {
+				@include background-color(lightblue, 0.15);
+				border-bottom: 1px solid #e4f8ff;
+                transition: all 1s ease-in-out;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .user-image {
+                    width: 40px;
+                    height: 40px;
+                    -webkit-border-radius: 50px;
+                    -moz-border-radius: 50px;
+                    border-radius: 50px;
+                }
+
+                .messages {
+                    padding-left: 10px;
+                    color: #909DA8;
+                    b {
+                        color: #727F8C;
+                    }
+                }
+                
+                &--link {
+                    @include flexbox();
+                    @include align-items(center);
+                    padding: 10px;
+                    text-decoration: none;
+                    text-align: left;
+                    font-size: 13px;
+                    line-height: 19px;
+
+                    &:hover, &:hover .messages {
+                        opacity: 1;
+                        color: $primarycolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

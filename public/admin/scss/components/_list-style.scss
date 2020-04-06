@@ -1,0 +1,260 @@
+
+.feed-list-box{
+    padding: 10px 15px;
+    background: $white;
+    @include box-shadow(0px, 0px, 5px, rgba(28,30,94,0.12));
+    border-radius: 5px;
+
+
+.drag-list {
+    width: 100%;
+    margin: 0 auto;
+
+    &.news-list {
+
+        li {
+            margin: 0;
+            padding: 4px 0;
+
+            a {
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items(center);
+                width: 100%;
+
+                .ago-time, h5, .button-wrap {
+                    @include flexbox();
+                }
+
+                .ago-time {
+                    @include flex(0 0 80px);
+                    color: $black;
+                }
+
+                h5 {
+                    font-family: $roboto;
+                    font-size:12px;
+                    line-height: 24px;
+                    font-weight: 300;
+                    color: $gray;
+                    text-transform: capitalize;
+                    margin: 0 0 5px;
+                    @include flex(0 0 300px);
+                    @include align-items(center);
+                    color: $black;
+
+                    span{
+                        margin-bottom: 2px;
+                        display: inline-grid;
+                        margin-right: 2px;
+
+                        img{
+                            max-width:10px;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-size: 13px;
+                    font-weight: 500;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding-right: 15px;
+                    color: $black;
+                    width: 100%;
+                }
+
+                .button-wrap {
+                    @include flex(0 0 80px);
+                    @include justify-content(space-around);
+                    color: $black;
+
+                    img {
+                        max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.drag-false {
+
+        li {
+
+            @media (max-width: $breakpoint-xs) {
+                @include flex-direction(column);
+            }
+
+            .content {
+
+                @media (max-width: $breakpoint-xs) {
+                    width: 100%;
+                }
+            }
+
+            .drag-area {
+                width: auto;
+                padding: 0;
+
+                .button-wrap {
+                    position: relative;
+                    height: 100%;
+                    right: 0;
+
+                    @media (max-width: $breakpoint-xs) {
+                        width: 100%;
+                    }
+
+                    .favorite-button {
+
+                        svg {
+                            width: 18px;
+                            @include primary-gradient-cross;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        margin: 0 0 12px;
+        border-bottom: 1px solid #dee2e6;
+        // -webkit-touch-callout: none;
+        // -webkit-user-select: none;
+        // -khtml-user-select: none;
+        // -moz-user-select: none;
+        // -ms-user-select: none;
+        // user-select: none;
+
+        overflow: hidden;
+        cursor: pointer;
+
+        .content, .drag-area {
+            @include flexbox();
+            @include flex-direction(column);
+        }
+
+        .ago-time {
+            padding: 0 5px;
+            white-space: nowrap;
+        }
+
+        .content {
+            padding: 5px 5px 5px 10px;
+            @include transition(1s);
+            @include calc (width, '100% - 22px');
+
+            &.active {
+                padding: 5px 120px 5px 10px;
+                @include transition(1s);
+
+                @media (max-width: $breakpoint-xs) {
+                    padding: 5px 5px 25px 10px;
+                }
+            }
+
+            h2 {
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 21px;
+                color: $gray;
+                margin: 0 0 5px;
+            }
+
+            h5 {
+                font-family: $roboto;
+                font-size:12px;
+                line-height: 24px;
+                font-weight: 300;
+                color: $gray;
+                text-transform: capitalize;
+                margin: 0 0 5px;
+
+                span{
+                    margin-bottom: 2px;
+                    display: inline-grid;
+                    margin-right: 2px;
+
+                    img{
+                        max-width:10px;
+                    }
+                }
+            }
+        }
+
+        .drag-area {
+            // position: relative;
+            // width: 22px;
+            @include justify-content(flex-start);
+            @include flex-direction(row);
+            @include align-items(center);
+            padding: 5px 5px 5px 10px;
+
+            @media (max-width: $breakpoint-xs) {
+                position: static;
+            }
+
+            a {
+                cursor: pointer;
+                padding: 0 8px;
+
+                img {
+                    max-width: 18px;
+                }
+            }
+
+            .button-wrap {
+                position: absolute;
+                right: -120px;
+                top: 0;
+                bottom: 0;
+                background: $lightblue;
+                padding: 0 10px;
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                @include transition (1s);
+
+                @media (max-width: $breakpoint-xs) {
+                    @include justify-content(space-around);
+                    top: inherit;
+                    height: 26px;
+                    right: -1000px;;
+                }
+
+                &.show {
+                    right: 0;
+                    @include transition (1s);
+
+                    @media (max-width: $breakpoint-xs) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .drag-move {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 22px;
+                z-index: 99;
+                background-image: url(#{$assetPath}/move.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: #e6fbff;
+                cursor: move;
+            }
+        }
+    }
+}
+
+}

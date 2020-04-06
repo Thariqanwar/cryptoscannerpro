@@ -1,0 +1,250 @@
+  
+.grid-stack {
+
+    .grid-stack-item {
+        
+        &.collapse-content {
+            // height: 70px !important;
+
+            .grid-stack-item-content {
+                height: 38px;
+            }
+        }
+    }
+
+    
+    &__wrapper {
+        height: 100%;
+        background: $white;
+        border: 1px solid #eceff1;
+        @include border-radius(10px);
+        // @include box-shadow(0, 0, 3px, rgba(31,30,47,.05));
+        position: relative;
+        overflow-y: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            right: 10%;
+            bottom: -20px;
+            @include background-color($black-0, 0.12);
+            @include filter (blur,40px);
+            z-index: -1;
+        }
+
+        &:hover {
+            overflow-y: auto !important;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05); 
+            border-radius: 3px;
+            background-clip: content-box;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2); 
+            border-radius: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: $secondarycolor; 
+        }
+    }
+    
+    &__header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding: 5px 10px;
+       background: $white;
+       //   @include primary-gradient-cross;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: move;
+        z-index: 999;
+        border-bottom: $secondarycolor 1px solid;
+
+        .left, .center, .right {
+
+            .button {
+                width: 28px;
+                height: 28px;
+                background: $secondarycolor;
+                border: none;
+                @include border-radius(4px);
+
+                &.lock-button {
+
+                    svg {
+                        width: 11px;
+                    }
+                }
+
+                &.minimize-button {
+
+                    svg {
+                        width: 12px;
+                    }
+                }
+
+                &.close-button {
+
+                    svg {
+                        width: 13px;
+                    }
+                }
+
+                &.active {
+                    background: $offwhite;
+                }
+                &.setting-icon{ 
+                    svg {
+                        width: 4px;
+                    }
+
+
+                }
+            }
+
+            .notification__list {
+				position: absolute;
+				background: $white;
+                width: 200px;
+                list-style-type: none;
+                text-align: center;
+                right: -20px;
+                top: 55px !important;
+                border-radius: 5px;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+                @include box-shadow(0px, 4px, 14px, rgba(0,0,0,0.3));
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-bottom-color: #fff;
+                    right: 11px;
+                    top: -20px;
+                    transform: translate(-50%);
+                }
+
+                &__name {
+                    font-size: 18px;
+                    font-weight: 600;
+                    background: #fff;
+                    color: $black;
+                    padding: 10px 0;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom: 1px solid #e4f8ff;
+                    transition: all 1s ease-in-out;
+					text-transform: capitalize;
+                    @include flexbox();
+                    @include justify-content(center);
+                    @include align-items(center);
+
+                    .notification-number {
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 10px;
+                        line-height: 10px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+				}      
+				
+				&__expire {
+					font-size: 14px;
+                    color: $black;
+					padding: 10px 0;
+					text-transform: capitalize;
+                    border-bottom: 1px solid #e4f8ff;
+				}
+
+				&.profile {
+					top: 70px;
+                    right: 0;
+                    
+                    @media (max-width: $breakpoint-xs) {
+                        right: -5px;
+
+                        &::before {
+                            right: 15px;
+                        }
+                    }
+                }
+                
+                &.notification {
+
+                    @media (max-width: $breakpoint-xs) {
+                        right: -86px;
+
+                        &::before {
+                            right: 80px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .left {
+            width: 70px;
+        }
+
+        .center {
+
+            h5 {
+                font-size: 16px;
+                font-weight: 500;
+                color: $primarycolor;
+
+                @media (max-width: $breakpoint-xs) {
+                    display: none;
+                }
+            }
+        }
+
+        .right {
+
+            .button:not(:first-child) {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 15px;
+        @include transition (1s);
+
+        &.collapse {
+            height: 0px;
+        }
+
+        // .table {
+            
+        //     tr {
+
+        //         th {
+        //             cursor: move;
+        //         }
+        //     }
+        // }
+    }
+}

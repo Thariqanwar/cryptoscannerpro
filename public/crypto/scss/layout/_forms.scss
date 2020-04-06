@@ -1,0 +1,26 @@
+
+.form-control {
+    height: 36px;
+    border-radius: 18px;
+    @include border-color($black, 0.1);
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    &.borderless {
+        border: none;
+        border-radius: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}

@@ -1,0 +1,122 @@
+/* Scss Document */
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(36,36,36,0.50)
+}
+
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(36,36,36,0.50)
+}
+
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(36,36,36,0.50)
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: rgba(36,36,36,0.50)
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+	font-family: $roboto;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	color: $gray;
+	background-color: $white;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0; 
+	overflow: hidden
+}
+
+a, button {
+	color: $primarycolor;
+	text-decoration: none;
+	cursor: pointer;
+	@include transition(all 0.3s ease-in-out);
+}
+
+a {
+	&:hover {
+		color: $secondarycolor;
+		text-decoration: none !important;
+	}
+}
+
+.equal {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.equal > [class*='col-'], .equal > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.text-center-verticle {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.background-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $black-0; 
+	border-radius: 3px;
+	background-clip: content-box;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $secondarycolor; 
+	border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: $secondarycolor; 
+}
+
+// Colors
+.primary-text {
+	color: $primarycolor;
+}

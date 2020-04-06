@@ -1,0 +1,275 @@
+
+.filter-popup {
+    
+    .modal-dialog {
+        max-width: 900px;
+
+        .modal-content {
+            border: none;
+
+            .modal-body {
+                padding: 0;
+
+                .heading {
+                    min-height: 50px;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    padding: 5px 15px;
+                    border-bottom: 1px solid #eee;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    .close {
+
+                        .close-icon {
+                            width: 22px;
+                        }
+                    }
+                }
+
+                .lang-select {
+                    @include flexbox();
+                    @include justify-content();
+                    @include align-items(center);
+                    min-height: 50px;
+                    padding: 10px 15px;
+                    border-bottom: 3px solid #ddd;
+
+                    label {
+                        white-space: nowrap;
+                        margin: 0 12px 0 0;
+                    }
+
+                    .search-input {
+                        width: 130px;
+                        font-size: 14px;
+                    }
+                }
+
+                .tab-wrap {
+                    position: relative;
+
+                    nav {
+
+                        .nav-tabs {
+                            border: none;
+
+                            .nav-item {
+                                font-weight: 500;
+                                width: 20%;
+                                background: #eee;
+                                color: $black;
+                                text-align: center;
+                                border: none;
+                                border-radius: 0;
+                                padding: 10px 5px;
+
+                                @media (max-width: $breakpoint-xs) {
+                                    padding: 10px 0;
+                                }
+
+                                @media (max-width: 358px) {
+                                    font-size: 12px;
+                                }
+
+                                &:not(:last-child) {                                
+                                    border-right: 1px solid #ddd;
+                                }
+
+                                &.active{
+                                    @include primary-gradient-cross;
+                                    color: $white;
+                                }
+
+                                &:hover{
+                                    @include primary-gradient-cross;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                    .tab-content {
+
+                        .content {
+                            padding: 0px 15px;
+
+                            .search-wrap {
+                                @include flexbox();
+                                @include justify-content(space-between);
+                                @include align-items(center);
+                                min-height: 60px;
+                                padding: 5px 0;
+                                margin: 0 0 10px;
+
+                                @media (max-width: $breakpoint-sm) {
+                                    @include flex-direction(column);
+                                    @include align-items(flex-start);
+                                    padding: 10px 0;
+                                }
+
+                                .search-input {
+                                    position: relative;
+
+                                    svg {
+                                        width: 12px;
+                                        position: absolute;
+                                        left: 11px;
+                                        top: 11px;
+                                        -moz-pointer-events:none;
+                                        -webkit-pointer-events:none;
+                                        -o-pointer-events:none;
+                                        -ms-pointer-events:none;
+                                        pointer-events:none;
+                                    }
+
+                                    .form-control {
+                                        font-size: 14px;
+                                        width: 220px;
+                                        padding: 4px 4px 4px 29px;
+                                    }
+                                }
+                            }
+
+                            .select-item-wrap {
+                                @include flexbox();
+                                @include align-items(center);
+                                @include justify-content(center);
+                                margin: 0 0 10px;
+
+                                @media (max-width: $breakpoint-xs) {
+                                    @include flex-direction(column);
+                                }
+
+                                p {
+                                    text-align: center;
+                                }
+
+                                .select-item-box {
+
+                                    @media (max-width: $breakpoint-xs) {
+                                        margin: 10px 0 10px;
+                                    }
+                                    
+                                    .select-box {
+                                        height: 180px;
+                                        min-width: 250px;
+                                        border: 1px solid #eee;
+                                        overflow-x: auto;
+                                        padding: 5px 15px;
+
+                                        .select-list {
+                                            
+                                            li {
+                                                padding: 5px 5px;
+                                                color: $black;
+                                                cursor: pointer;
+
+                                                &:hover {
+                                                    background: $primarycolor;
+                                                    color: $white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .arrows-square {
+                                    border: 1px solid #eee;
+                                    padding: 8px;
+                                    background: #eee;
+                                    @include border-radius(5px);
+                                    margin: 0 10px;
+
+                                    @media (max-width: $breakpoint-xs) {
+                                        @include rotate (90deg);
+                                    }
+
+                                    svg {
+                                        opacity: 0.7;
+                                    }
+                                }
+
+                                .blank-button {
+                                    background: transparent;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .share-wrap {
+                                margin: 0 0 15px;
+
+                                p {
+                                    font-size: 14px;
+                                }
+
+                                .inpur-wrap {
+                                    position: relative;
+                                    border: 1px solid #ddd;
+                                    @include border-radius(30px);
+                                    max-width: 500px;
+
+                                    .form-control {
+                                        max-width: 400px;
+                                        border: none;
+                                    }
+
+                                    .purple-button {
+                                        position: absolute;
+                                        right: 3px;
+                                        top: 3px;
+                                        background: $secondarycolor;
+                                        color: $white;
+                                        padding: 2px 12px;
+                                        @include border-radius(20px);
+                                        font-weight: 500;
+                                    }
+                                }                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bootstrap-duallistbox-container label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bootstrap-duallistbox-container.moveonselect .removeall, .bootstrap-duallistbox-container.moveonselect .moveall {
+    font-size: 0;
+    position: relative;
+    background: #eee;
+    border: none;
+
+    &::before {
+        font-size: 14px;
+        font-weight: 600;
+        color: $primarycolor;
+    }
+}
+
+.bootstrap-duallistbox-container.moveonselect .moveall {
+    
+    &::before {
+        content: "Add All";
+    }
+}
+
+.bootstrap-duallistbox-container.moveonselect .removeall {
+
+    &::before {
+        content: "Remove All";
+    }
+}
+
+.bootstrap-duallistbox-container select {
+    @include border-color ($black, 0.1);
+}

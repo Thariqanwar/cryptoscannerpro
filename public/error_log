@@ -1,0 +1,1 @@
+[28-Nov-2019 21:32:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 12288 bytes) in /home/cspxxvk1/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 332

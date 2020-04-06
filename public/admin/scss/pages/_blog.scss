@@ -1,0 +1,94 @@
+
+.blog-list {
+	position: relative;
+    padding: 15px 0 0;
+    
+	.blog-col {
+		margin-bottom: 30px;
+		.image-wrap {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+		}
+        
+        
+		.content-wrap {
+			background-color: $darkgray;
+            height: 100%;
+			
+			.heading-wrap {
+				padding: 25px 30px;
+				
+				@media (max-width: $breakpoint-xs) {
+					padding: 15px 20px;
+				} 
+				
+				h1 {
+					font-size: 24px;
+					line-height: 36px;
+					text-transform: none;
+					color: $black;
+					margin: 0 0 8px;
+					
+					@media (max-width: $breakpoint-xs) {
+						font-size: 22px;
+						line-height: 28px;
+					}
+				}
+
+				p {
+					font-size: 13px;
+					color: $gray;
+					margin: 0
+				}
+			}
+			
+			.details-wrap {
+				padding: 25px 30px;
+				
+				@media (max-width: $breakpoint-xs) {
+					padding: 15px 20px;
+				}
+				
+				p {
+					font-size: 14px;
+					line-height: 24px;
+					margin: 0 0 15px;
+				}
+			
+				.tag {
+                    margin: 0 0 25px;
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+
+					a {
+						color: $black;
+                        text-transform: capitalize;
+                        
+                        &:not(:first-child) {
+                            margin-left: 5px;
+                        }
+					}
+
+					img {
+						margin-right: 8px;
+					}
+				}
+
+				.button-wrap {
+					overflow: hidden;
+
+					.border-box-button {
+						float: left;
+						margin-right: 8px;
+					}
+
+					.plus-button {
+						float: left;
+						margin-right: 30px;
+					}
+				}
+			}
+		}
+	}
+}

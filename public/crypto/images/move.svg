@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="18" viewBox="0 0 12 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="12" height="18" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="move" clip-path="url(#clip-path)">
+    <g transform="translate(-1067 -1297)">
+      <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(1067 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+      <g id="Ellipse_22" data-name="Ellipse 22" transform="translate(1074 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-1067 -1290)">
+      <g id="Ellipse_17-2" data-name="Ellipse 17" transform="translate(1067 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+      <g id="Ellipse_22-2" data-name="Ellipse 22" transform="translate(1074 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-1067 -1283)">
+      <g id="Ellipse_17-3" data-name="Ellipse 17" transform="translate(1067 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+      <g id="Ellipse_22-3" data-name="Ellipse 22" transform="translate(1074 1297)" fill="none" stroke="#7a0c8c" stroke-width="0.6">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.7" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

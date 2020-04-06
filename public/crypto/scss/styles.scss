@@ -1,0 +1,40 @@
+// Vendors
+@import 'vendors/bootstrap/bootstrap';
+@import 'vendors/bootstrap/bootstrap-grid';
+@import 'vendors/bootstrap/bootstrap-reboot';
+@import 'vendors/animate/animate';
+@import 'vendors/daterangepick/daterangepicker';
+@import 'vendors/data-table/dataTables.bootstrap4.min';
+// @import 'vendors/draggable-note/jquery-ui';
+// @import 'vendors/draggable-note/minicolors';
+// @import 'vendors/draggable-note/postitall';
+// @import 'vendors/draggable-note/trumbowyg';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/buttons';
+
+// Components
+@import 'components/main-banner';
+@import 'components/dropdown';
+@import 'components/back-to-top';
+@import 'components/logo-slider';
+@import 'components/price-plan';
+@import 'components/inner-banner';
+
+// Layout
+@import 'layout/header';
+@import 'layout/sidemenu';
+@import 'layout/forms';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/home';
+@import 'pages/feeds';
+@import 'pages/alerts-log';

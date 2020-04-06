@@ -1,0 +1,138 @@
+footer {
+  background: $black;
+  font-family: $roboto;
+  font-size: 14px;
+  position: relative;
+
+  &.footer-one {
+    position: relative;
+
+    .footer-top {
+      padding: 70px 0;
+
+      @media (max-width: $breakpoint-sm) {
+        padding: 40px 0;
+      }
+
+      h2 {
+        font-family: $roboto;
+        font-size: 32px;
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+        @media (max-width: $breakpoint-sm) {
+          font-size: 21px;
+        }
+      }
+      p {
+        color: $white;
+        line-height: 24px;
+      }
+
+      .white-btn{
+        margin: 3px 5px;
+
+      }
+
+      .footer-logo {
+        max-width: 250px;
+        margin: 0 0 20px;
+      }
+
+      .copy-right {
+        color: $white;
+      }
+
+      .footer-address {
+        p {
+          color: $white;
+          margin: 0 0 8px;
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $secondarycolor;
+            }
+          }
+        }
+      }
+
+      .social-list {
+        margin: 15px 0 0;
+
+        a {
+          color: $black;
+          display: inline-block;
+          margin: 0 2px;
+          padding: 0 2px;
+
+          &:hover {
+            color: $secondarycolor;
+          }
+        }
+      }
+
+      h4 {
+        font-family: $roboto;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+
+        margin: 0 0 10px;
+
+        @media (max-width: $breakpoint-md) {
+          margin: 40px 0 15px;
+        }
+      }
+
+      .footer-list {
+        li {
+          a {
+            color: $white;
+            line-height: 32px;
+            position: relative;
+            padding-left: 18px;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 9px;
+              height: 9px;
+              background: url("../images/footer_icon.png");
+              background-size: 100%;
+              left: 0px;
+              top: 3px;
+            }
+
+            &:hover {
+              color: $secondarycolor;
+            }
+          }
+        }
+      }
+
+      .footer-email {
+        margin-top: 15px;
+        input {
+          border-radius: 25px;
+          font-size: 13px;
+
+          &.subscribe-btn {
+            background: $white;
+            color: $black;
+            padding: 7px 35px;
+            font-size: 14px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            width: auto;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

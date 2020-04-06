@@ -1,0 +1,134 @@
+.inner-banner {
+
+    &.alerts-log-page {
+
+        &::before {
+            background-image:url(#{$assetPath}/alerts-log.svg);
+        }
+    }
+}
+
+.dataTables_wrapper {
+
+    .row {
+
+        &:first-child {
+            font-size: 14px;
+            background: $lightblue;
+            padding: 20px 20px 10px;
+            margin-bottom: 20px !important;
+        }
+    }
+}
+
+div.dataTables_wrapper div.dataTables_info, .page-link {
+    font-size: 14px;
+    color: #737B83;
+}
+
+.page-item {
+
+    &.previous, &.next {
+     
+        &.disabled {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.page-item.active .page-link {
+    background: $primarycolor;
+    border-color: $primarycolor;
+    color: $white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: $white;
+}
+
+.table-striped tbody tr:nth-of-type(even), .table thead th {
+    background-color: #F8FAFD ;
+}
+
+table {
+    font-size: 14px;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border: none;
+    border-bottom: 1px solid #E9EFF7;
+}
+
+.table-bordered th, .table-bordered td {
+    border: none;
+    border-bottom: 1px solid #E9EFF7 !important;
+}
+
+.table-bordered {
+    border: 1px solid #E9EFF7;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 991px) {
+
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child, 
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    div.dataTables_wrapper div.dataTables_info {
+        margin: 0 0 15px;
+    }
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        @include justify-content(center);
+    }
+
+    div.dataTables_wrapper div.dataTables_length select {
+        width: 80px;
+    }
+
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #E9EFF7;
+      display: block;
+    }
+    
+    table td {
+      border-bottom: 1px solid #E9EFF7;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }

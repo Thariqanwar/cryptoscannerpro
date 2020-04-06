@@ -1,0 +1,40 @@
+{
+    "name": "leadthread/php-google-shortener",
+    "description": "Easily shorten URLs in PHP",
+    "keywords": [
+        "google url shortener",
+        "bitly",
+        "shorten",
+        "url",
+        "tylercd100",
+        "leadthread"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/leadthread/php-google-shortener",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Tyler Arbon",
+            "email": "tylercd100@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9|^7.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8|^5.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "LeadThread\\GoogleShortener\\":"src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeadThread\\GoogleShortener\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+    }
+}

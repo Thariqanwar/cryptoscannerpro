@@ -1,0 +1,60 @@
+
+.form-control {
+    height: 36px;
+    border-radius: 18px;
+    @include border-color($black, 0.1);
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    &.borderless {
+        border: none;
+        border-radius: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+
+.custom-switch {
+    padding-left: 45px;
+
+    .custom-control-label {
+        
+
+        &::before {
+            width: 36px;
+            height: 18px;
+            @include border-radius(9px);
+            left: -45px;
+           
+        }
+    }
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(19px);
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(.25rem + 3px);
+    left: calc(-45px + 3px);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+   // @include primary-gradient-cross;
+   background: $tertiarycolor;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}

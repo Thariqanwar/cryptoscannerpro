@@ -1,0 +1,180 @@
+
+.intro {
+    padding: 90px 0 0;
+    margin: 0 0 -30px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 50px 0 0;
+    }
+
+    p {
+        font-size: 36px;
+        line-height: 48px;
+        color: $navy;
+        max-width: 456px;
+        margin: auto;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 21px;
+            line-height: 32px;
+            margin: 0 auto 50px;
+        }
+    }
+
+    .video-wrapper {
+        position: relative;
+
+        @media (max-width: $breakpoint-sm) {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -166px;
+            bottom: -90px;
+            width: 307px;
+            height: 186px;
+            background-image: url(#{$assetPath}/dot-top.png);
+            background-repeat: no-repeat;
+        }
+
+        .image-wrap {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                right: 0;
+                bottom: -30px;
+                @include background-color ($black, 0.15);
+                @include filter (blur, 15px);
+                @include border-radius(60px);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                @include background-color($white, 0.30);
+            }
+
+            img {
+                position: relative;
+            }
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -50px 0 0 -50px;
+
+            @media (max-width: $breakpoint-sm) {
+                width: 60px;
+                height: 60px;
+                margin: -30px 0 0 -30px;
+            }
+
+            img {
+
+                @media (max-width: $breakpoint-sm) {
+                    max-width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.services{
+    background:$lightblue ; 
+    padding: 140px 0 100px;
+    background-image: url(#{$assetPath}/white-bg.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+    .services-box{
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content (center);
+        @include align-items (center);
+
+        .services-icon {
+            @include flexbox();
+            @include align-items(center);
+            width: 64px;
+            height: 64px;
+            margin: 0 0 50px;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 500;
+            color: $navy;
+            text-transform: uppercase;
+        }
+
+        p { 
+            font-size: 14px;
+            line-height: 26px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
+
+#video-popup {
+    @include background-color ($blue, 0.65);
+
+    .modal-dialog {
+        max-width: 800px;
+
+        .modal-content {
+            box-shadow: none;
+            background: transparent;
+            padding: 0;
+            border: none;
+
+            .close {
+                position: absolute;
+                text-shadow: none;
+                color: $white;
+                right: -10px;
+                top: -10px;
+                opacity: 1;
+
+                @media (max-width: $breakpoint-md) {
+                    right: 15px;
+                    top: -15px;
+                }
+            }
+
+            .modal-body {
+
+                .video-wrapper {
+                    width: 100%;
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    padding-top: 0;
+                    height: 0;
+                }
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+            }
+        }
+    }
+}

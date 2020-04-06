@@ -1,0 +1,208 @@
+.banner {
+    position: relative;
+    z-index: 10;
+    @include background-color ($lightblue, 0.5);
+
+    .banner-content {
+        position: relative;
+        
+        .a{fill:#e0e0e0;}
+        .b{fill:#d9d9d9;}
+        .c{fill:#b8b8b8;}
+        .d{opacity:0.43;}
+        .e{fill:url(#a);}
+        .f{opacity:0.22;}
+        .g{fill:url(#b);}
+        .h{fill:url(#c);}
+        .i{fill:#bbdefb;}
+        .j{fill:#1e88e5;}
+        .k{fill:#2196f3;}
+        .l{fill:#42a5f5;}
+        .m{fill:#6a75ba;}
+        .n{fill:#545d94;}
+        .o{fill:#eea886;}
+        .p{fill:#d9d3c8;}
+        .q{fill:#222538;}
+        .r{fill:#ffc955;}
+        .s{fill:#a77860;}
+        .t{fill:#c29941;}
+        .u{fill:#fff;}
+        .v{fill:#e1f5fe;}
+        .w{fill:#616587;}
+        .x{fill:#152b3d;}
+        .y{fill:#ffc05c;}
+        .z{fill:#254380;}
+        .aa{fill:#353a3d;}
+        .ab{fill:#e55353;}
+        .ac{fill:#eea987;}
+        .ad{fill:#2f4563;}
+        .ae{fill:#202338;}
+        .af{fill:#2f6b8c;}.ag{fill:#877d78;}.ah{fill:#f5e1d9;}.ai{fill:#4b6f9e;}.aj{fill:#eddad3;}.ak{fill:#c9bab3;}.al{fill:#1e2c40;}.am{fill:#81807e;}.an{fill:#292c47;}.ao{fill:#cac7d1;}.ap{fill:#1d2033;}.aq{fill:#323657;}.ar{fill:#c78d71;}.as{fill:#a09ea6;}.at{fill:#eae6f2;}.au{fill:#3a4066;}.av{fill:#f2dfd8;}.aw{fill:#d6c5be;}.ax{fill:url(#e);}.ay{fill:url(#f);}.az{fill:url(#g);}.ba{fill:#ffa855;}.bb{fill:#ffa555;}.bc{fill:#858585;}.bd{fill:#e2d2ca;}.be{fill:#1c1e30;}.bf{fill:#24263d;}.bg{fill:#282b45;}.bh{fill:#1f2136;}.bi{fill:#4f558a;}.bj{fill:#d6c5bf;}.bk{fill:#16202e;}.bl{fill:#007fe6;}.bm{fill:#6e6760;}.bn{fill:#918880;}.bo{fill:#706865;}.bp{fill:#eb4747;}.bq{fill:#d69779;}.br{fill:#12131f;}.bs{fill:#9e633a;}.bt{fill:#97a43c;}.bu{fill:#82522f;}.bv{fill:#c67b47;}.bw{fill:#b3d5fb;}.bx{fill:#95cef7;}
+
+        .side-bg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            animation-delay: 0.5s;
+            animation-duration: 0.5s;
+        }
+                        
+        .slider-item {           
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items (center);
+
+            .content {
+                width: 1140px;         
+                min-height: 767px;
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items (center);
+
+                @media (max-width: $breakpoint-lg) {
+                    width: 830px;
+                    min-height: 540px;
+                }
+
+                @media (max-width: $breakpoint-md) {
+                    @include flex-direction(column-reverse);
+                    @include justify-content(center);
+                    padding: 120px 40px 120px;
+                }
+
+                .content-wrap {
+                    
+                    h2 {
+                        font-size: 36px;
+                        font-weight: 700;
+                        line-height: 44px;
+                        color: $navy;
+                        margin: 0 0 20px;
+                        animation-delay: 1.9s;
+                        animation-duration: 1.9s;
+                        position: relative;
+
+                        @media (max-width: $breakpoint-sm) {
+                            font-size: 28px;
+                            line-height: 34px;
+                        }
+
+                        &::before {
+                            content: "";
+                            width: 186px;
+                            height: 189px;
+                            position: absolute;
+                            top: -120px;
+                            left: -50px;
+                            background-image: url(#{$assetPath}/dot-1.png);
+                            background-repeat: no-repeat;
+
+                            @media (max-width: $breakpoint-sm) {
+                                display: none;
+                            }
+                        }                                
+                    }
+                    
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        color: $gray;
+                        max-width: 460px;
+                        margin: 0 0 30px;
+                        animation-delay: 2.5s;
+                        animation-duration: 2.5s;
+                    }
+
+                    .button {
+                        animation-delay: 3.2s;
+                        animation-duration: 3.2s;
+                    }
+                }
+                
+                .image-wrap {
+                    position: relative;
+                    animation-delay: 1.2s;
+                    animation-duration: 1.2s;
+                    
+                    img {
+
+                        @media (max-width: $breakpoint-md) {
+                            width: 100%;
+                            max-width: 330px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Scss Document */
+
+.btm_go {
+    content: "";   
+    bottom: 60px;
+    display: block;
+    height: 20px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    transition: all 0.5s ease 0s;
+    width: 20px;
+    z-index: 99;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    
+    .box span {
+        width: 20px;
+        height: 20px;
+        display: block;
+        border-right: 2px solid $secondarycolor;
+        border-bottom: 2px solid $secondarycolor;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animatescroll 2s infinite;
+    }
+    
+    .box span:nth-child(2) {
+        animation-delay: -0.2s;
+    }
+    
+    .box span:nth-child(3) {
+        animation-delay: -0.4s;
+    }
+}
+
+@keyframes animatescroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wave {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}

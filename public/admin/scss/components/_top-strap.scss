@@ -1,0 +1,33 @@
+.top-strap {
+  background: $white;
+  padding: 10px 15px;
+  @include border-radius(5px);
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  span {
+    &.item {
+      background: $secondarycolor;
+      padding: 4px 20px;
+      display: inline-block;
+      font-size: 13px;
+     @include border-radius(20px)
+     
+    }
+  }
+
+  .plus-btn{
+    background: $tertiarycolor;
+   //@include primary-gradient-cross;
+   width: 32px;
+   height: 32px;
+   line-height: 26px;
+   @include border-radius(50%);
+   color: $white;   
+   margin-left: 8px;
+   svg{
+       width: 12px; 
+       fill: $white;
+   }
+  }
+}

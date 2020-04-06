@@ -1,0 +1,85 @@
+// Vendors
+@import 'vendors/bootstrap/bootstrap';
+@import 'vendors/bootstrap/bootstrap-grid';
+@import 'vendors/bootstrap/bootstrap-reboot';
+@import 'vendors/animate/animate';
+@import 'vendors/daterangepick/daterangepicker';
+@import 'vendors/data-table/dataTables.bootstrap4.min';
+@import 'vendors/jquery-ui/jquery-ui';
+@import 'vendors/grid-stack/gridstack';
+@import 'vendors/grid-stack/gridstack-extra';
+@import 'vendors/duall-list-box/bootstrap-duallistbox';
+// @import 'vendors/fontawesome/fontawesome';
+
+
+@import "vendors/fontawesome/fontawesome";
+@import "vendors/fontawesome/solid";
+@import "vendors/fontawesome/brands";
+
+.user {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+
+
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/buttons';
+
+// Components
+@import 'components/main-banner';
+@import 'components/dropdown';
+@import 'components/back-to-top';
+@import 'components/logo-slider';
+@import 'components/price-plan';
+@import 'components/inner-banner';
+@import 'components/dragstack-custom';
+@import 'components/list-style';
+@import 'components/modal';
+@import 'components/card';
+@import 'components/pop-up';
+@import 'components/top-strap';
+@import 'components/country-select';
+@import 'components/magicsearch';
+@import 'components/autocompletesearch';
+
+
+
+
+
+// Layout
+@import 'layout/header';
+@import 'layout/sidemenu';
+@import 'layout/forms';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/home';
+@import 'pages/feeds';
+@import 'pages/alerts-log';
+@import 'pages/relative-strength';
+@import 'pages/blog';
+@import 'pages/blog-detials';
+
+
+@import 'themes/dark-theme';

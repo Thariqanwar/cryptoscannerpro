@@ -1,0 +1,75 @@
+.perfect-plan{
+	background:url('../images/footer_bg.svg') $lightblue no-repeat bottom -1px center;
+	background-size: 100% auto;
+	padding: 80px 0 100px;
+
+	h2 {
+        font-family: $roboto;
+        font-size: 32px;
+        font-weight: 600;
+        color: $navy;
+        text-transform: uppercase;
+        @media (max-width: $breakpoint-sm) {
+          font-size: 21px;
+        }
+	  }
+	  
+	  .price-box{
+		  background: $white;
+		  padding: 30px 25px;
+		  text-align: center;
+		  border-radius: 10px;
+		  @include box-shadow(7px, 0px, 15px 1px,rgba(0,0,0,0.10));
+	  
+			h4{
+				font-family: $roboto;
+				font-size:26px;
+				font-weight: 500;
+				color: $navy;
+				text-transform: uppercase;
+	
+			  }
+		  .price-box-cont{
+			  margin-top: 20px;
+			  min-height: 200px;
+
+			  .monthly-price{
+				sup{
+					font-size: 16px;
+					line-height: 15px;
+					margin-right: 3px; 
+				}
+				.price__number{
+					font-size: 36px; 
+					font-weight: 400;
+					color: $navy;
+
+				} 
+				.text-minor{
+					font-size: 12px;
+					color: $navy;
+
+				}
+			  }
+		
+	
+			  p{ 
+				  font-size: 14px;
+				  line-height: 26px;
+				  margin-top: 15px;
+			  }
+
+
+		  }
+		   
+
+		.primary-button{
+			line-height: 24px;
+		} 
+
+		  
+	  }
+
+}
+
+ 

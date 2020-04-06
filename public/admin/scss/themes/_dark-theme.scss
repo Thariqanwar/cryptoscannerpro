@@ -1,0 +1,300 @@
+
+body {
+
+    &.dark-theme {
+        background: #2e2f32;
+        color: #c2c2c2;
+
+        header {
+
+            &.dashboard {
+
+                .left {
+                    background: #191c20;
+
+                    &::after {
+                        background: #191c20;
+                    }
+
+                    .logo-full, .logo-sm {
+                        color: $white;
+                    }
+
+                    .menu-min-button {
+
+                        .menu-icon {
+                            color: rgba(255,255,255,0.5);
+                        }
+                    }
+                }
+
+                .right {
+                    background: #000;
+
+                    .search-box {
+
+                        .form-control {
+                            background: transparent;
+                            @include inputPlaceholder {
+                                // color: rgba(255,255,255,0.5);
+                            }
+                        }
+
+                        &::before {
+                            background-image: url(#{$assetPath}/search-white.png);
+                        }
+                    }
+
+                    .right-content .header__dropdown .notification-icon .dropbtn svg,
+                    .right-content .header__dropdown .theme-icon .dropbtn svg,
+                    .header__dropdown .small-icon .dropbtn span.name {
+                        color: $white;    
+                    }
+
+                    .header__dropdown .small-icon .notification-number {
+                        background: $secondarycolor;
+                    }
+                }
+            }
+        }
+
+        .main-sidebar {            
+            background: #191c20;
+
+            .side-menu {
+                background: #191c20;
+
+                li  {
+
+                    a {
+                        color: #a3a3a3;
+
+                        &::before:hover {
+                            background: $secondarycolor;
+                        }
+
+                        &.active,  &:hover {
+                            color: $secondarycolor;
+
+                            &::before {
+                                background: $secondarycolor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid-stack__wrapper {
+            background: #191c20;
+            border-color: #191c20;
+        }
+
+        .table-striped tbody tr:nth-of-type(even), .table thead th {
+            background-color: #191c20;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #2e2f32;
+        }
+
+        .table-bordered th, .table-bordered td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .drag-list {
+
+            li {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+                .content {
+
+                    h2 {
+                        color: #c2c2c2;
+                    }
+
+                    h5 {
+                        color: #bfbfbf;
+                    }
+                }
+            }
+        }
+
+        .header__dropdown .small-icon .notification__list {
+            background: #191c20;
+            @include box-shadow(0px, 0px, 35px, black);
+
+            &::before {
+                border-bottom-color: #191c20;
+            }
+
+            &__name {
+                background: #191c20;
+                color: #c2c2c2;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            li {
+                background: #191c20;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                a {
+                    color: #c2c2c2;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .header__dropdown .small-icon .list__item .messages {
+            color: #c2c2c2;
+
+            b {
+                color: #c2c2c2;
+            }
+        }
+
+        .header__dropdown .small-icon .notification__list__expire {
+            color: #c2c2c2;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .grid-stack__header {
+            background: #000000;
+            h5{
+                color: $white;
+            }
+        }
+
+        .feed-list .advance-search {
+            background: #191c20;
+
+            .form-control {
+                background: #2A3038;
+                border: none;
+            }
+        }
+
+        .drag-list {
+            background: #191c20;
+            padding: 30px 30px 18px;
+
+            @media (max-width: $breakpoint-sm) {
+                padding: 25px 15px 13px;
+            }
+
+            li {
+                background: #24272a;
+                border: none;
+            }
+        }
+
+        .form-control {
+            color: #c2c2c2;
+        }
+
+        .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #c2c2c2;
+        }
+        
+        .form-control::-moz-placeholder { /* Firefox 19+ */
+            color: #c2c2c2;
+        }
+        
+        .form-control:-ms-input-placeholder { /* IE 10+ */
+            color: #c2c2c2;
+        }
+        
+        .form-control:-moz-placeholder { /* Firefox 18- */
+            color: #c2c2c2;
+        }
+
+        .daterangepicker {
+            background: #191c20;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .daterangepicker .calendar-table {
+            background: transparent;
+            border: none;
+        }
+
+        .daterangepicker td.off {
+            background: transparent;
+        }
+
+        .daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+            background-color: transparent;
+            border: none;
+            color: #c2c2c2;
+        }
+
+        .daterangepicker td.active, .daterangepicker td.active:hover {
+            background: #c2c2c2;
+            color: #191c20;
+        }
+
+        .daterangepicker .drp-buttons {
+            border: none;
+        }
+
+        .drag-list li .drag-area .button-wrap {
+            background: #191c20;
+        }
+
+        .grid-stack__content {
+
+            .drag-list {
+                padding: 0;
+            }
+        }
+
+        .content-card {
+            background: #191c20;
+            color: #c2c2c2;
+            border: none;
+        }
+
+        .relative-strength-page .content-card.form-card .custom-switch .custom-control-label, .relative-strength-page .content-card.form-card h3, .relative-strength-page .content-card.banner-card h2, .relative-strength-page .content-card.banner-card p {
+            color: #c2c2c2;
+        }
+
+        .relative-strength-page .content-card.banner-card .read-more-button {
+            color: #05D6FB;
+            
+            &::after {
+                background-image: url(#{$assetPath}/right-white.png);
+            }
+        }
+
+        .btn-warning.btn-sm, .btn-group-sm>.btn-warning.btn {
+            color: $white !important;
+            background-color: #05D6FB;
+            border-color: #05D6FB;
+        }
+
+        .top-strap{
+            background: $black-0;
+        }
+        .plus-btn{
+            background: $white;
+            svg{ 
+                fill:$black-0;
+            }
+
+        }
+
+
+
+
+    }
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover, .btn-primary {
+    @include primary-gradient-cross;
+    color: $white;
+    border: none;
+}

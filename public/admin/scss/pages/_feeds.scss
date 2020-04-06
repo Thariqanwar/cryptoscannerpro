@@ -1,0 +1,220 @@
+.inner-banner {
+
+    &.feeds-page {
+
+        &::before {
+            background-image:url(#{$assetPath}/Group1424.svg);
+        }
+    }
+}
+
+.feed-list {
+    position: relative;
+    padding: 70px 0;
+
+    &.dashboard {
+        padding: 0;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 30px 0;
+    }
+
+    .advance-search {
+        position: relative;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        background: $white;
+        border-radius: 5px;
+        display: none;
+        opacity: 0;
+
+
+        &.open{
+
+            display: block;
+            opacity: 1;
+
+
+        }
+
+        .advance-search-form{
+            display: table;
+            // width: 100%;
+
+            @media (max-width: $breakpoint-sm) {
+                display: block;
+            }
+
+            .col {
+                display: table-cell;
+                width: auto;
+
+                @media (max-width: $breakpoint-sm) {
+                    display: block;
+                    margin-top: 10px;
+
+                }
+
+
+
+                .custom-control-inline{
+                    margin-right: 5px;
+                    font-size: 12px;
+
+                    ::before {
+                        left: -20px;
+                    }
+                    ::after {
+                        left: -20px;
+                    }
+                }
+            }
+
+            .notification-switch{
+                label{
+                    opacity: 0.5;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 35px;
+                        background: #aebbff;
+                        top: -3px;
+                        transform: rotate(45deg);
+                        left: 10px;
+                        display: none;
+
+                    }
+                }
+
+                input[type='checkbox']{
+                    display: none;
+
+                    + label{
+                    &::after{
+                          display: block;
+
+                    }
+                }
+                  }
+
+                  input:checked + label{
+                      opacity: 1;
+                      &::after{
+                        display: none;
+
+                  }
+
+
+
+
+                  }
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+        .form-group {
+            // max-width: 240px;
+            margin-bottom: 0px;
+        }
+
+        .form-control {
+            font-size: 13px;
+            min-width: 100px;
+
+
+        }
+        .plus-btn{
+            background: $tertiarycolor;
+           //@include primary-gradient-cross;
+           width: 32px;
+           height: 32px;
+           line-height: 26px;
+           @include border-radius(50%);
+           color: $white;
+           margin-left: 8px;
+           svg{
+               width: 12px;
+               fill: $white;
+           }
+          }
+
+        .magicsearch-wrapper{
+            // min-width: 240px;
+        }
+        .magicsearch{
+      width: 100% !important;
+        }
+
+        .btn-group {
+            @include flexbox();
+
+            .multiselect {
+                padding: 0 15px;
+                background: $white;
+                border: 1px solid #ced4da;
+                height: 36px;
+                font-size: 14px;
+                @include border-radius(18px);
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items(center);
+
+                .multiselect-container>li>a>label {
+                    padding: 5px 15px 5px 15px;
+                }
+            }
+        }
+    }
+    .search-show-icon{
+        float: right;
+        padding: 0px 6px;
+        background: $tertiarycolor;
+        width: 26px;
+        height: 25px;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        position: absolute;
+        z-index: 999;
+        right: 15px;
+        top: 0px;
+
+        svg{
+            width: 100%;
+        }
+
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+
+    .drag-list.news-list li a {
+        @include flex-wrap(wrap);
+
+        h5 {
+            padding: 0 6px;
+        }
+    }
+
+    .drag-list.news-list li a>* {
+        @include flex(1 1 160px);
+    }
+}
+
+
+
+
+
+
